@@ -1,13 +1,14 @@
 { pkgs ? import <nixpkgs> {} }:
 
 let
-  pythonPackages = pkgs.python310Packages; # Use Python 3.10 packages
+  pythonPackages = pkgs.python310Packages;
   python = pkgs.python310;
 in pkgs.mkShell {
   buildInputs = with pkgs; [
     python
     pythonPackages.pip
-    pythonPackages.virtualenv
+    pythonPackages.poetry-core    # Access poetry-core through pythonPackages
+    poetry                        # Full Poetry CLI is a top-level package
     gcc
     stdenv.cc.cc.lib
     zlib
