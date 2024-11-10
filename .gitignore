@@ -1,9 +1,10 @@
 # ENVIRONMENT VARIABLE
 .venv
-venv
+*venv
 .env
 
 # POETRY LOCK
 poetry.lock
 
-# 
+# CACHE
+__pycache__
