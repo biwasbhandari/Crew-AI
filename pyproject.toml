@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "crewai roadmap"
+version = "0.1.0"
+description = ""
+authors = ["Biwas Bhandari <biwas2059@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<=3.13"
+crewai = "^0.76.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

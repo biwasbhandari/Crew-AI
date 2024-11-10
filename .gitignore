@@ -1,3 +1,6 @@
 # PYTHON VIRTUAL ENVIRONMENT
 .venv
 venv
+
+# POETRY LOCK
+poetry.lock
