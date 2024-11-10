@@ -10,6 +10,9 @@ python = ">=3.12,<=3.13"
 crewai = "^0.76.9"
 
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
