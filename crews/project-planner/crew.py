@@ -3,14 +3,15 @@ import yaml
 from dotenv import load_dotenv
 from typing import List
 from pydantic import BaseModel, Field
+from db.client import supabase
 
 # LOAD DOTENV FILES
 load_dotenv()
 
 # FILE PATHS FOR YAML CONFIGURATIONS
 files = {
-    'agents': 'agents/project-planner/config/agents.yaml',
-    'tasks': 'agents/project-planner/config/tasks.yaml'
+    'agents': 'crews/project-planner/config/agents.yaml',
+    'tasks': 'crews/project-planner/config/tasks.yaml'
 }
 print(files)
 
@@ -84,24 +85,15 @@ crew = Crew(
     verbose=True
 )
 
-# EXECUTE CREW
-project = 'AI Automation Software'
-industry = 'Technology'
-project_objective = 'Create a platform for a small online business to automate their daily activities.'
-team_members = """
-- Json (Project Manager)
-- Biwas (Software Engineer)
-- Human (Software Engineer)
-- Patrick (QA Engineer)
-"""
-project_requirements = """
-- Deploy a chatbot with NLP to handle FAQs and escalate complex inquiries.
-- Automated personalized email campaigns, segment customers, and automate follow-ups.
-- Automate task assignment, reminders, progress tracking, and team collaboration.
-- Automate invoicing, expense tracking, and generate financial performance reports.
-- Schedule social posts, suggest content, and track engagement metrics.
-- Create automated workflows for process efficiency and productivity tracking.
-"""
+# ADD INPUTS FROM SUPABASE
+data = supabase.table('test').select("*").eq('id', 1).execute().data[0]
+project = data['project']
+industry = data['industry']
+project_objective = data['project_objective']
+team_members = data['team_members']
+project_requirements = data['project_requirements']
+
+# print(project, industry, project_objective, team_members, project_requirements)
 
 inputs = {
     'project_type': project,
