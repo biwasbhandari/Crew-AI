@@ -1,6 +1,8 @@
 task_breakdown:
   description: >
-    Carefully analyze the {project_requirements}for the {project_type} project and break them into individual tasks. Define each task's scope in detail, set achievable timelines, and ensuer that all dependencies are accounted for:
+    Carefully analyze the following project requiements:
+    {project_requirements}
+    for the {project_type} project and break them into individual tasks. Define each task's scope in detail, set achievable timelines, and ensuer that all dependencies are accounted for:
 
     {project_requirements}
 
