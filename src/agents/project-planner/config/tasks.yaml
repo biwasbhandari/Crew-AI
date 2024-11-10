@@ -21,3 +21,4 @@ resource_allocation:
     Analyze the detailed task breakdown and time/resource estimations for the {project_type} project. Develop a strategic resource allocation plan by assigning {team_members}, and equipment to each task. Ensure the allocation is balanced to avoid bottlenecks, addresses all dependencies, and maximizes efficiency to meet {project_objective} while staying within budget. Factor in skill levels, availability of resources, and any constraints from {project_requirements} to optimize the allocation.
 
   expected_output: >
+    A complete resource allocation report, detailing the assignment of team members, budget, and equipment for each task in the {project_type} project. The final report MUST include an overview of resource distribution, a chart visualizing allocation across the project timeline, and an identification of potential resource conflicts or shortages, with proposed resolutions.
