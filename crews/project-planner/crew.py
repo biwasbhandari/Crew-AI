@@ -9,8 +9,8 @@ load_dotenv()
 
 # FILE PATHS FOR YAML CONFIGURATIONS
 files = {
-    'agents': 'src/agents/project-planner/config/agents.yaml',
-    'tasks': 'src/agents/project-planner/config/tasks.yaml'
+    'agents': 'agents/project-planner/config/agents.yaml',
+    'tasks': 'agents/project-planner/config/tasks.yaml'
 }
 print(files)
 
