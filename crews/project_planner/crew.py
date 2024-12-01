@@ -1,7 +1,5 @@
-from crewai import Agent, Task, Crew
+from crewai import Crew
 from dotenv import load_dotenv
-from typing import List
-from pydantic import BaseModel, Field
 from db.client import supabase
 from crews.project_planner.agent import project_planning_agent, estimation_agent, resource_allocation_agent
 from crews.project_planner.task import task_breakdown, time_resource_estimation, resource_allocation
