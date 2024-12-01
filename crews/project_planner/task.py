@@ -1,6 +1,6 @@
 from crewai import Task
-from .agent import project_planning_agent, estimation_agent, resource_allocation_agent
-from .helper import ProjectPlan
+from crews.project_planner.agent import project_planning_agent, estimation_agent, resource_allocation_agent
+from crews.project_planner.helper import ProjectPlan
 task_breakdown = Task(
     description="Carefully analyze the following project requiements:\n {project_requirements} for the {project_type} project and break them into individual tasks. Define each task's scope indetail, set achievable timelines, and ensuer that all dependencies are accounted for:\n{project_requirements}Team members:{team_members}",
     expected_output="A comprehensive list of tasks with detailed descriptions, timelines, dependencies, and deliverables. Your final output MUST include a Gantt chart or similar timeline visualization specific to the {project_type} project.",
