@@ -1,5 +1,4 @@
 from crewai import Agent, Task, Crew
-import yaml
 from dotenv import load_dotenv
 from typing import List
 from pydantic import BaseModel, Field
