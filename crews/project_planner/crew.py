@@ -10,7 +10,7 @@ load_dotenv()
 crew = Crew(
     agents=[project_planning_agent, estimation_agent, resource_allocation_agent],
     tasks=[task_breakdown, time_resource_estimation, resource_allocation],
-    # verbose=False
+    verbose=False
 )
 
 # ADD INPUTS FROM SUPABASE
@@ -33,17 +33,18 @@ inputs = {
 
 # KICK OFF THE CREW
 result = crew.kickoff(inputs=inputs)
-# Assuming task outputs are strings or can be converted to strings
-store = supabase.table("task_responses").insert({
-    'task_breakdown': task_breakdown.output,
-    'time_resource_estimation': time_resource_estimation.output,
-    'resource_allocation': resource_allocation.output
-}).execute()
+# # Assuming task outputs are strings or can be converted to strings
+# store = supabase.table("task_responses").insert({
+#     task_breakdown.output_json,
+#     time_resource_estimation.output_json,
+#     resource_allocation.output_json
+# }).execute()
 
-if hasattr(store, 'error') and store.error:
-    print("Error storing the data: ", store.error)
-else:
-    print("Data succesfully stored:", store.data)
+# if hasattr(store, 'error') and store.error:
+#     print("Error storing the data: ", store.error)
+# else:
+#     print("Data succesfully stored:", store.data)
+
 print(task_breakdown.output)
 print(time_resource_estimation.output)
 print(resource_allocation.output)
