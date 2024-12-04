@@ -23,38 +23,6 @@ cd Crew-AI
 poetry install
 ```
 
-### 3. Run the Project
-
-Start the application by executing the main script:
-
-```bash
-poetry run crews/project_planner/crew.py
-```
-
----
-
-## Prerequisites
-
-- **Python**: Ensure Python is installed on your system (compatible version).
-- **Poetry**: Install Poetry for managing dependencies. [Install Poetry](https://python-poetry.org/docs/#installation).
-
----
-
-## Contributing
-
-Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request. Please follow the project's [contribution guidelines](CONTRIBUTING.md) if available.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Issues and Feedback
-
-If you encounter any issues or have suggestions for improvements, please open an issue in the [Issues Section](https://github.com/biwasbhandari/Crew-AI/issues).
 
 ---
 
